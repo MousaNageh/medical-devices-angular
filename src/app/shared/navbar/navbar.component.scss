@@ -1,0 +1,12 @@
+.navbar{
+  .navbar-nav {
+    justify-content: end;
+    flex-grow: 1;
+  }
+  .active{
+    a{
+
+      color: #d63384;
+    }
+  }
+}
