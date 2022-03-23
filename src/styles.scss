@@ -1,3 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 $main-color:#212529 ;
 $active-color:#d63384 ;
+input.ng-invalid.ng-touched{
+  border: 1px solid #d63384 ;
+}
+.text-main{
+  color:#d63384 ;
+}
+.btn-main,.btn-main:hover{
+  background-color:#d63384 ;
+  color: #fff;
+}
+[disabled] {
+  cursor: not-allowed ;
+}
