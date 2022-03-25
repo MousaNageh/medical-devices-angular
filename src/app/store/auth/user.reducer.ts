@@ -9,17 +9,15 @@ if (user){
   userInitstate = JSON.parse(user);
 }
 
-export function storeUserReduceer(
-  state:UserState=userInitstate,
-  action:userActions.StoreUserAction):any
+export function userReduceer(
+  userState:UserState=userInitstate,
+  action:userActions.UserActionsTypes):any
   {
   switch (action.type){
     case userActions.STORE_USER:
-      return {
-        ...state,
-        user:action.user
-      }
-    default :
-        return state
+      userState = action.user ;
+      return userState ;
+      default :
+        return userState;
     }
   }

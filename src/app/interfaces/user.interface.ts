@@ -11,8 +11,9 @@ export interface UserState{
         is_superuser:boolean,
         seniorEngineer:boolean,
   }
-  tokens:{
-    refresh:string,
-    access:string
-  }
+}
+
+export interface TokensState{
+  access:string;
+  refresh:string
 }

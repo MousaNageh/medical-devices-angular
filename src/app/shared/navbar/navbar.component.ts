@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { UserState } from 'src/app/interfaces/user.interface';
+import { TokensState, UserState } from 'src/app/interfaces/user.interface';
+import { StoreUserTokens } from 'src/app/store/auth/user.action';
 
 
 @Component({
@@ -10,15 +11,14 @@ import { UserState } from 'src/app/interfaces/user.interface';
 })
 export class NavbarComponent implements OnInit {
   isLogIn:boolean = false ;
-  constructor(private store:Store<{user:UserState}>) { }
+  constructor(private store:Store<{tokens:TokensState,user:UserState}>) { }
 
   ngOnInit(): void {
-    this.store.select("user").subscribe(user=>{
-      if(user){
+    this.store.select("tokens").subscribe(tokens=>{
+      if(tokens){
         this.isLogIn = true ;
       }
     })
   }
- 
 
 }
