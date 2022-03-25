@@ -5,5 +5,5 @@ export const STORE_USER ="STORE_USER"
 
 export class StoreUserAction implements Action{
   readonly type = STORE_USER;
-  user!: UserState;
+  constructor(public user:UserState){};
 }
